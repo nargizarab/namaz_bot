@@ -1,7 +1,7 @@
 import os
 
 # Replace with your bot token from @BotFather
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8698966885:AAHcqrFJDL-BrrYftK8CM-wYSIaKkR3soaU")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Almaty coordinates
 CITY = "Almaty"
