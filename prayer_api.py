@@ -47,6 +47,7 @@ async def fetch_prayer_times(for_date: date = None) -> dict:
                     year=for_date.year,
                     month=for_date.month,
                     day=for_date.day
+                    tzinfo=ZoneInfo(TIMEZONE)
                 )
                 result[prayer] = dt
             except ValueError:

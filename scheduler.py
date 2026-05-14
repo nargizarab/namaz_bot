@@ -1,5 +1,6 @@
 import logging
 from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 from aiogram import Bot
@@ -94,7 +95,7 @@ async def daily_setup(bot: Bot, scheduler: AsyncIOScheduler):
         },
     ]
 
-    now = datetime.now()
+    now = datetime.now(ZoneInfo(TIMEZONE))
 
     for block in blocks:
         start_prayer = block["notify_start_by"]
